@@ -1,0 +1,19 @@
+bool isValid(char* word) {
+    int n = strlen(word);
+    if (n < 3) return false;
+    int Vow = 0, Con = 0;
+    for (int i = 0; i < n; i++) {
+        char c = word[i];
+        if (!((c >= 'a' && c <= 'z') ||(c >= 'A' && c <= 'Z') ||(c >= '0' && c <= '9'))) {
+            return false;
+        }
+        if ((c >= 'a' && c <= 'z') ||(c >= 'A' && c <= 'Z')) {
+            if (c=='a'||c=='A'||c=='e'||c=='E'||c=='i'||c=='I'||c=='o'||c=='O'||c=='u'||c=='U') {
+                Vow = 1;
+            } else {
+                Con = 1;
+            }
+        }
+    }
+    return Vow && Con;
+}
