@@ -1,0 +1,11 @@
+int alternatingSum(int* nums, int numsSize) {
+    int s=0;
+    for(int i=0;i<numsSize;i++){
+        if(i%2==0){
+            s+=nums[i];
+        }else{
+            s-=nums[i];
+        }
+    }
+    return s;
+}
