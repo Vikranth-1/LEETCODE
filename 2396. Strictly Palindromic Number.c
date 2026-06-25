@@ -1,0 +1,3 @@
+bool isStrictlyPalindromic() {
+    return FALSE;
+}
